@@ -13,7 +13,7 @@
     <div class="container m-auto my-5 d-flex color">
        
         <div class="row d-flex">
-            <div class="col-5 border bg-white p-0 ">
+            <div class="col-5 border bg-white p-0 pb-5 ">
                 <div class="first-card d-flex justify-content-between">
 
                     <div class="contact d-flex p-2">
@@ -52,7 +52,7 @@
                 </div>
                 
                 <div class="card d-flex ">
-
+                    
                     <ul class="list-group height-overflow overflow-y">
                         <!-- LIST ITEM CHE CICLA I CONTACTS -->
                         <li class="" v-for="(contact,index) in contacts">
@@ -67,9 +67,33 @@
     
                 </div>
             </div>
-            <div class="col-7 border bg-white">
+            <div class="col-7 border bg-white px-0 d-flex flex-column justify-content-between">
+                <div class="first-card d-flex justify-content-between">
+
+                    <div class="contact d-flex p-2">
+                        <img src="./img/avatar_5.jpg" class="rounded-circle dimension-contacs" alt="">
+                        <p>Michele</p>
+                    </div>
+                    
+                    <div class="icons d-flex align-items-center">
+                        <i class="fa-solid gray pe-2 fa-circle-notch"></i>
+                        <i class="fa-solid fa-paperclip pe-2 gray"></i>
+                        <i class="fa-solid gray pe-3 fa-ellipsis-vertical"></i>
+                    </div>
+    
+                </div>
+                <div class="background-chat">
+                    
+                </div>
+                <div class="input-group flex-nowrap p-2 bg-beige ">
+                    <span class="input-group-text icons-tastiera bg-beige gray" ><i class="fa-regular fa-face-smile"></i></span>
+                    <input type="text" class="form-control " placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="addon-wrapping">
+                    <span class="input-group-text bg-beige icons-tastiera gray" ><i class="fa-solid fa-microphone"></i></span>
+                </div>
 
             </div>
+
+
         </div>
 
     </div>

@@ -12,9 +12,7 @@ body{
 .row{
     width: 100%;
 }
-.border{
-    border: 1px solid red;
-}
+
 .dimension-contacs{
     width: 60px;
 }
@@ -25,7 +23,7 @@ body{
 }
 
 .first-card{
-    background-color: rgb(192, 186, 186);
+    background-color: rgb(227, 227, 227);
     width: 100%;
 }
 .card{
@@ -43,6 +41,17 @@ body{
 }
 .height-overflow{
     height: 500px;
+
+}
+
+.background-chat{
+    background-image: url(../img/mine.jpg);
+    height: 650px;
+}
+
+.icons-tastiera{
+    border: none;
+    background-color: none;
 
 }
 
@@ -68,4 +77,7 @@ body{
 .blue{
     color: rgb(31, 123, 251);
 
+}
+.bg-beige{
+    background-color: rgb(211, 190, 152);
 }

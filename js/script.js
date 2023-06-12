@@ -1,9 +1,11 @@
+// inserimento VueJs
 const {createApp} = Vue
 
 
 createApp({
     data(){
         return{
+            // OBJECTS CONTACTS
             contacts: [
                 {
                     name: 'Michele',
