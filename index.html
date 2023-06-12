@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- CONTAINER PRICIPALE -->
     <div class="container m-auto my-5 d-flex color">
        
         <div class="row d-flex">
@@ -45,19 +46,26 @@
     
                 
                 </div>
-                <div class="card d-flex justify-content-between">
+                <div class="input-group p-2">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass gray"></i></span>
+                    <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                
+                <div class="card d-flex ">
 
-                    <div v-for="(contact,index) in contacts" class="contact d-flex p-2 border-contact overflow-y">
-                        <img :src="contact.avatar" class="rounded-circle dimension-contacs" alt="">
-                        <p>{{contact.name}}</p>
-                    </div>
-                    
+                    <ul class="list-group height-overflow overflow-y">
+                        <!-- LIST ITEM CHE CICLA I CONTACTS -->
+                        <li class="" v-for="(contact,index) in contacts">
+                            <div class="contact d-flex p-2 border-contact overflow-y">
+                                <img :src="contact.avatar" class="rounded-circle dimension-contacs" alt="">
+                                <p>{{contact.name}}</p>
+                            </div>
+    
+                        </li>
+                    </ul>
                     
     
                 </div>
-
-    
-
             </div>
             <div class="col-7 border bg-white">
 
