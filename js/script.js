@@ -6,7 +6,7 @@ createApp({
     data(){
         return{
             // OBJECTS CONTACT
-            
+            activeContact : 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -175,7 +175,11 @@ createApp({
             
     },
     methods:{
-        
+        selectContact(index){
+            // let activeContact;
+            this.activeContact = index
+            
+        }
 
     }
 }).mount('.container')
