@@ -5,7 +5,8 @@ const {createApp} = Vue
 createApp({
     data(){
         return{
-            // OBJECTS CONTACTS
+            // OBJECTS CONTACT
+            
             contacts: [
                 {
                     name: 'Michele',
@@ -172,5 +173,9 @@ createApp({
             
         }
             
+    },
+    methods:{
+        
+
     }
 }).mount('.container')

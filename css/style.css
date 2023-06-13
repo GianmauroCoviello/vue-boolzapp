@@ -16,11 +16,6 @@ body{
 .dimension-contacs{
     width: 60px;
 }
-.first-card p{
-    padding-top: 20px;
-    padding-left: 10px;
-
-}
 
 .first-card{
     background-color: rgb(227, 227, 227);
@@ -31,8 +26,8 @@ body{
 }
 
 .border-contact{
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-top: 1px solid rgb(221, 211, 211);
+    border-bottom: 1px solid rgb(211, 205, 205);
 }
 .overflow-y{
     overflow-y: auto;
@@ -55,6 +50,26 @@ body{
 
 }
 
+.message-received{
+    background-color: white;
+    width: 200px;
+    max-height: 150px;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+
+.send-message{
+    background-color: rgb(142, 248, 116);
+    width: 200px;
+    max-height: 150px;
+    border-radius: 20px;
+    margin: 20px; 
+    float: right;
+
+}
+
+
 
 
 
@@ -66,7 +81,7 @@ body{
 
 }
 .bg-blue{
-    background-color: rgb(31, 123, 251);
+    background-color: rgb(114, 169, 246);
 
 }
 
@@ -79,5 +94,5 @@ body{
 
 }
 .bg-beige{
-    background-color: rgb(211, 190, 152);
+    background-color: rgb(237, 224, 199);
 }
