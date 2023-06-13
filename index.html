@@ -85,15 +85,22 @@
                     </div>
     
                 </div>
-                <div class="background-chat ">
-                    <div class="message-received d-flex align-items-center">
-                       <p class="mb-0 p-3">Ciao ti va un caffe?</p>
+                <div class="background-chat" >
+
+                    <div class="message-received" v-for="(message,index) in contacts[activeContact].messages" >
+                        <p v-if="message.status == 'sent'">{{message.message}}</p>
+                        <p>{{message.date}}</p>
+                        
+
 
                     </div>
-                    <div class="send-message d-flex align-items-center">
-                        <p class="mb-0 p-3">Vabenissimo</p>
 
-                    </div>    
+                    <div class="message-send" v-for="(message,index) in contacts[activeContact].messages">
+                        <p>{{message.date}}</p>
+                        <p v-if="message.status == 'received'">{{message.message}}</p>
+
+                    </div>
+                       
                 </div>
                 <div class="input-group flex-nowrap p-2 bg-beige ">
                     <span class="input-group-text icons-tastiera bg-beige gray" ><i class="fa-regular fa-face-smile"></i></span>

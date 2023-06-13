@@ -53,15 +53,17 @@ body{
 .message-received{
     background-color: white;
     width: 200px;
+    padding: 10px;
     max-height: 150px;
     border-radius: 20px;
     margin: 20px;
 
 }
 
-.send-message{
+.message-send{
     background-color: rgb(142, 248, 116);
     width: 200px;
+    padding: 10px;
     max-height: 150px;
     border-radius: 20px;
     margin: 20px; 
@@ -95,4 +97,8 @@ body{
 }
 .bg-beige{
     background-color: rgb(237, 224, 199);
+}
+
+.font-size{
+    font-size: 16px;
 }

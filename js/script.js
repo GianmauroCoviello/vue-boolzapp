@@ -178,6 +178,8 @@ createApp({
         selectContact(index){
             // let activeContact;
             this.activeContact = index
+            console.log(index)
+            return index;
             
         }
 
