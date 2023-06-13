@@ -50,27 +50,29 @@ body{
 
 }
 
-.message-received{
+.sent{
     background-color: white;
-    width: 200px;
     padding: 10px;
-    max-height: 150px;
-    border-radius: 20px;
+    max-width: 300px;
     margin: 20px;
-
-}
-
-.message-send{
-    background-color: rgb(142, 248, 116);
-    width: 200px;
-    padding: 10px;
-    max-height: 150px;
     border-radius: 20px;
-    margin: 20px; 
-    float: right;
+    align-self: flex-start;
+
+    
+    
 
 }
+.received{
+    background-color: rgb(150, 241, 100);
+    padding: 10px;
+    max-width: 300px;
+    margin: 20px;
+    border-radius: 20px;
+    align-self: flex-end;
 
+
+
+}
 
 
 

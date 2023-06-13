@@ -85,19 +85,31 @@
                     </div>
     
                 </div>
-                <div class="background-chat" >
+                <div class="background-chat overflow-y" >
 
-                    <div class="message-received" v-for="(message,index) in contacts[activeContact].messages" >
+                    <!-- <div class="message-received" v-for="(message,index) in contacts[activeContact].messages" >
                         <p v-if="message.status == 'sent'">{{message.message}}</p>
-                        <p>{{message.date}}</p>
+                        
                         
 
 
                     </div>
 
                     <div class="message-send" v-for="(message,index) in contacts[activeContact].messages">
-                        <p>{{message.date}}</p>
+                        
                         <p v-if="message.status == 'received'">{{message.message}}</p>
+
+                    </div> -->
+                    <div class="messages d-flex flex-column " v-for="(message,index) in contacts[activeContact].messages">
+                        <div  class="received"  v-if="message.status == 'received'">
+                            {{message.message}}
+
+                        </div>
+                        <div class="sent" v-if="message.status == 'sent'">
+                            {{message.message}}
+                            
+
+                        </div>
 
                     </div>
                        
