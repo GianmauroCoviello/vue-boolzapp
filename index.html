@@ -52,7 +52,7 @@
                 <div class="input-group p-2">
                     <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass gray"></i></span>
                     <!-- INPUT DI RICERCA DEI CONTATTI -->
-                    <input v-model="searchNameContact" @keyup.enter="searchContact" type="text" class="form-control" placeholder="cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
+                    <input v-model="searchNameContact" @input="searchContact" type="text" class="form-control" placeholder="cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
                 </div>
                 
                 <div class="card d-flex ">
@@ -63,6 +63,7 @@
                             <div class="contact d-flex  p-2 border-contact overflow-y">
                                 <img :src="contact.avatar" class="rounded-circle dimension-contacs" alt="">
                                 <div class="ps-2">{{contact.name}} <br><p class="gray">ultimo messaggio inviato</p></div>
+                                <p class="clock">12:00</p>
                                 
                             </div>
     
