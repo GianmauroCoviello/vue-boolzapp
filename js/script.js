@@ -186,6 +186,7 @@ createApp({
         },
         // funzione per inniettare tramite l'input un nuovo messaggio 
         sendMessage(){
+
             console.log(this.newMessage)
             let newMess = {
                 message: this.newMessage,
@@ -193,18 +194,20 @@ createApp({
                 date: 'send now'
             }
             
-            // console.log(this.contacts.push(newMess))
+            
             this.contacts[this.activeContact].messages.push(newMess)
+
+            this.newMessage=''
 
             setTimeout( () =>{
 
-                this.contacts[this.activeContact].messages.push({
-
-                    message: 'vabene',
+                let answerMessage = {
+                    message: 'ok',
                     status: 'received',
                     date: 'received now'
-
-                })
+                    
+                }
+                this.contacts[this.activeContact].messages.push(answerMessage)
 
 
 
