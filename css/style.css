@@ -121,3 +121,12 @@ body{
 .font-size{
     font-size: 16px;
 }
+
+/* EFFETTI DI HOVER */
+.contact:hover{
+    background-color: rgb(211, 208, 208);
+}
+
+.icon:hover{
+    color: white;
+}
