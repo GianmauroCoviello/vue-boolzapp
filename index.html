@@ -87,26 +87,16 @@
                 </div>
                 <div class="background-chat overflow-y" >
 
-                    <!-- <div class="message-received" v-for="(message,index) in contacts[activeContact].messages" >
-                        <p v-if="message.status == 'sent'">{{message.message}}</p>
-                        
-                        
-
-
-                    </div>
-
-                    <div class="message-send" v-for="(message,index) in contacts[activeContact].messages">
-                        
-                        <p v-if="message.status == 'received'">{{message.message}}</p>
-
-                    </div> -->
+                    <!-- CICLAGGIO DEI MESSAGGI IN BASE ALLE CONDIZIONI -->
                     <div class="messages d-flex flex-column " v-for="(message,index) in contacts[activeContact].messages">
+                        <!-- VENGONO INNIETTATI NEL DOM I MESSAGGI CHE HANNO COME STATUS 'RECEIVED' -->
                         <div  class="received"  v-if="message.status == 'received'">
-                            {{message.message}}
+                            <p class="pe-5">{{message.message}}</p>
 
                         </div>
+                        <!-- VENGONO INNIETTATI NEL DOM I MESSAGGI CHE HANNO COME STATUS 'SENT' -->
                         <div class="sent" v-if="message.status == 'sent'">
-                            {{message.message}}
+                            <p class="pe-5">{{message.message}}</p>
                             
 
                         </div>
@@ -114,9 +104,10 @@
                     </div>
                        
                 </div>
-                <div class="input-group flex-nowrap p-2 bg-beige ">
+                <div class="input-group flex-nowrap p-2 bg-beige">
                     <span class="input-group-text icons-tastiera bg-beige gray" ><i class="fa-regular fa-face-smile"></i></span>
-                    <input type="text" class="form-control " placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="addon-wrapping">
+                    <!-- INPUT CON L'IMPLEMENTAZIONE DEL KEYUP TRAMITE IL TASTO CENTER CHE INNIETTI LA SUA FUNZIONE -->
+                    <input type="text" class="form-control " placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="addon-wrapping" v-model="newMessage" @keyup.enter="sendMessage()">
                     <span class="input-group-text bg-beige icons-tastiera gray" ><i class="fa-solid fa-microphone"></i></span>
                 </div>
 

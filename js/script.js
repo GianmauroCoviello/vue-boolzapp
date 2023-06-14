@@ -7,6 +7,7 @@ createApp({
         return{
             // OBJECTS CONTACT
             activeContact : 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -175,12 +176,25 @@ createApp({
             
     },
     methods:{
+        // funzione per cambiare il contatto della chat
         selectContact(index){
             // let activeContact;
             this.activeContact = index
             console.log(index)
             return index;
             
+        },
+        // funzione per inniettare tramite l'input un nuovo messaggio 
+        sendMessage(){
+            console.log(this.newMessage)
+            let newMess = {
+                message: this.newMessage,
+                status: 'sent'
+            }
+            
+            console.log(newMess)
+            // console.log(this.contacts.push(newMess))
+
         }
 
     }
