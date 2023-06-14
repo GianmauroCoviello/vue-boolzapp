@@ -189,13 +189,29 @@ createApp({
             console.log(this.newMessage)
             let newMess = {
                 message: this.newMessage,
-                status: 'sent'
+                status: 'sent',
+                date: 'send now'
             }
             
-            console.log(newMess)
             // console.log(this.contacts.push(newMess))
+            this.contacts[this.activeContact].messages.push(newMess)
 
+            setTimeout( () =>{
+
+                this.contacts[this.activeContact].messages.push({
+
+                    message: 'vabene',
+                    status: 'received',
+                    date: 'received now'
+
+                })
+
+
+
+            }, 1000)
+            
         }
+       
 
     }
 }).mount('.container')

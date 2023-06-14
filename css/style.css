@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(9, 106, 57);
-
+    background: linear-gradient(180deg, #009688 15%, #D9DBD4 15%);
 }
+
 /* UTILITIES */
 
 .row{
@@ -51,6 +51,20 @@ body{
 }
 
 .sent{
+
+    background-color: rgb(168, 209, 147);
+    padding: 10px;
+    max-width: 300px;
+    margin: 20px;
+    border-radius: 20px;
+    align-self: flex-end;
+    
+    
+    
+
+}
+.received{
+
     background-color: white;
     padding: 10px;
     max-width: 300px;
@@ -58,20 +72,13 @@ body{
     border-radius: 20px;
     align-self: flex-start;
 
-    
-    
+
 
 }
-.received{
-    background-color: rgb(150, 241, 100);
-    padding: 10px;
-    max-width: 300px;
-    margin: 20px;
-    border-radius: 20px;
-    align-self: flex-end;
 
-
-
+.date{
+    color: rgb(140, 128, 128);
+    font-size: 13px;
 }
 
 

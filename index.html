@@ -91,12 +91,14 @@
                     <div class="messages d-flex flex-column " v-for="(message,index) in contacts[activeContact].messages">
                         <!-- VENGONO INNIETTATI NEL DOM I MESSAGGI CHE HANNO COME STATUS 'RECEIVED' -->
                         <div  class="received"  v-if="message.status == 'received'">
-                            <p class="pe-5">{{message.message}}</p>
+                            <p class="pe-5 ">{{message.message}}</p>
+                            <p class="date mb-0">{{message.date}}</p>
 
                         </div>
                         <!-- VENGONO INNIETTATI NEL DOM I MESSAGGI CHE HANNO COME STATUS 'SENT' -->
                         <div class="sent" v-if="message.status == 'sent'">
                             <p class="pe-5">{{message.message}}</p>
+                            <p class="date mb-0">{{message.date}}</p>
                             
 
                         </div>
