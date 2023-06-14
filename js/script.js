@@ -5,9 +5,11 @@ const {createApp} = Vue
 createApp({
     data(){
         return{
-            // OBJECTS CONTACT
+            
             activeContact : 0,
             newMessage: '',
+            searchNameContact: '',
+            // OBJECTS CONTACTS
             contacts: [
                 {
                     name: 'Michele',
@@ -198,7 +200,7 @@ createApp({
             this.contacts[this.activeContact].messages.push(newMess)
 
             this.newMessage=''
-
+            // setTimeout che inserisca dopo due secondi il messaggio di risposta 
             setTimeout( () =>{
 
                 let answerMessage = {
@@ -211,9 +213,23 @@ createApp({
 
 
 
-            }, 1000)
+            }, 2000)
             
-        }
+        },
+        // funzione per individuare i contatti in base al 'name'
+        searchContact(){
+            let searchName = this.searchNameContact.toLowerCase()
+            this.contacts.forEach((contact) => {
+                let contactName = contact.name.toLowerCase()
+                contact.visible = contactName.includes(searchName)
+                
+                console.log(contact.visible)
+            });
+
+            
+            
+        },
+        
        
 
     }

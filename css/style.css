@@ -81,12 +81,21 @@ body{
     font-size: 13px;
 }
 
+/* style per individuare con la funzione i contatti in base al 'name' */
+.none{
+    display: none;
+}
+.block{
+    display: block;
+
+}
 
 
 
 
 
-/* bg-color */
+
+/* bg-color e size */
 .bg-white{
     background-color: white;
 
@@ -97,7 +106,7 @@ body{
 }
 
 .gray{
-    color: gray;
+    color: rgb(185, 179, 179);
 }
 
 .blue{
