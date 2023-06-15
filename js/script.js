@@ -199,6 +199,13 @@ createApp({
             
             this.contacts[this.activeContact].messages.push(newMess)
 
+            console.log(newMess.message)
+
+            // CONDIZIONE CHE INDICA CHE SE IL MESSAGGIO INVIATO E UGUALE AD UNA STRINGA VUOTA ALLORA IL MESSAGGIO NON VIENE IMMESSO NELLA CHAT
+            if (newMess.message === '') {
+                newMess.status = ''    
+            }
+
             this.newMessage=''
             // setTimeout che inserisca dopo due secondi il messaggio di risposta 
             setTimeout( () =>{
@@ -211,9 +218,14 @@ createApp({
                 }
                 this.contacts[this.activeContact].messages.push(answerMessage)
 
+                // CONDIZIONE CHE INDICA CHE SE IL MESSAGGIO INVIATO E UGUALE AD UNA STRINGA VUOTA ALLORA IL MESSAGGIO DI RISPOSTA RICEVUTO NON VIENE IMMESSO AUTOMATICAMENTE
+                if (newMess.message === '') {
+                    answerMessage.status = ''   
+                }
 
 
-            }, 2000)
+
+            }, 1000)
             
         },
         // funzione per individuare i contatti in base al 'name'
